@@ -6,6 +6,35 @@
     <title>Boycott Page</title>
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Boycott Checker</h1>
+        <input type="text" id="brandInput" placeholder="Enter the brand name here">
+        <button onclick="checkBoycott()">Check</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function checkBoycott() {
+        var brandInput = document.getElementById("brandInput").value;
+        var boycottedBrands = [
+        "Adidas", "Ariel", "Burger King", "Coca Cola", "Dell", "Dior", "Disney", "Doritos", "Dove",
+        "Fanta", "Gillette", "Google", "Google Chrome", "Head and Shoulders", "H&M", "HP", "KFC", 
+        "Lays", "Lipton", "L’oreal", "MAC", "Mcdonald’s", "Minute maid", "M&Ms", "Mountain dew", 
+        "Nescafe", "Oral-B", "Oreo", "Pampers", "Pantene", "Paypal", "Pepsi", "Pizza Hut", "Snickers", 
+        "Sprite", "Starbucks", "7 UP", "Ajinomoto Co., Inc.", "Ambi Pur", "Axe", "Barbie", "Cadbury", 
+        "Celine", "Cerelac", "Cerave", "Cheetos", "Chips Ahoy", "Clear", "Cornetto", "Downy", "Cr. pepper", 
+        "Durex", "Evian", "Fairy", "Galaxy", "Garnier", "Gatorade", "Hot Wheels", "Johnson & Johnson", 
+        "Jo Malone", "Juicy Fruit", "KitKat", "Knorr", "Maggi", "Maybelline", "Milka", "Milo", "Nestea", 
+        "Nestle", "Nido", "Olay", "Old Spice", "P&G", "Quaker", "Ralph Lauren", "Rexona", "Safeguard", 
+        "Sunsilk", "Tide", "Unilever", "Vaseline", "Vicks"
+        ];
+            
+        if (boycottedBrands.includes(brandInput)) {
+            document.getElementById("result").innerText = "The brand " + brandInput + " is boycotted.";
+        } else {
+            document.getElementById("result").innerText = "The brand " + brandInput + " is not boycotted.";
+        }
+}
+
+    </script>
 </body>
 </html>
