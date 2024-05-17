@@ -6,12 +6,35 @@
     <title>Boycott Page</title>
 </head>
 <body>
-    <div class="container">
+    <div class="navbar">
+        <img src="images/logo.jpg" alt="homepage logo" width="50">
+        <a class="page-links" href="page1.html">Boycotts & Fundraising</a>
+        <a class="page-links" href="page2.html">Home</a>
+    </div>
+    
+    <div class="banner">
+        <h1 class="header"><strong>WATERMELON SEEDS</strong></h1>
+        <p class="par"><br><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam in libero varius, at volutpat justo lacinia.</strong></p>
+    </div>
+
+    <div class="boycotts">
         <h1>Boycott Checker</h1>
         <input type="text" id="brandInput" placeholder="Enter the brand name here">
         <button onclick="checkBoycott()">Check</button>
         <p id="result"></p>
     </div>
+
+    <div class="donate">
+        <p class="par"><br><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum quam in libero varius, at volutpat justo lacinia.</strong></p>
+        <!-- donate button here -->
+    </div>
+        
+    <div class="footer">
+        <p><span><strong>PamSevillaCino Ent.</span> &nbsp All Rights Reserved 2024</strong>
+    </div>
+    
+    <link rel="stylesheet" href="style.css">
+    
     <script>
         function checkBoycott() {
         var brandInput = document.getElementById("brandInput").value;
