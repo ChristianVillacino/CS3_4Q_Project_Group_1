@@ -28,7 +28,7 @@
 .banner{
     background-image: url(images/banner3.png);
     padding: 1.5vw;
-    height: 75vh;
+    height: 25vh;
     background-position:center;
     background-repeat:no-repeat;
     background-size: cover;
@@ -72,4 +72,18 @@
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 15px;
+}
+
+form {
+    left: 25vw;
+    display: flex;
+    background-color: #f4f4f4;
+    padding: 5vw;
+    width: 400px;
+    height: 500px;
+}
+
+fieldset{
+    width: 400px;
+    padding: 10px;
 }

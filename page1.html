@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="navbar">
@@ -15,11 +16,58 @@
         <h1 class="header"><strong>WATERMELON SEEDS</strong></h1>
         <p class="par"><br><strong>Even the smallest seedlings can grow to something bigger.</strong></p>
     </div>
-</div>
-<div class="footer">
-    <p><span><strong>PamSevillaCino Ent.</span> &nbsp All Rights Reserved 2024</strong>
+    <form onsubmit="return record();" action="profilepage.html">
+        <fieldset>
+            <br>
+            <div>Sign Up</div><hr>
+            <label for="firstName">First Name *</label><br>
+            <input type="text" id="firstName" required><br><br>
+            <label for="lastName">Last Name *</label><br>
+            <input type="text" id="lastName" required><br><br>
+            <div>Gender *</div>
+            <input type="radio" name="sex" id="male" value="male" required>
+            <label for="male">Male</label><br>
+            <input type="radio" name="sex" id="female" value="female" required>
+            <label for="female">Female</label><br>
+            <input type="radio" name="sex" id="pNTS" value="pNTS" required>
+            <label for="pNTS">Prefer Not to Say</label><br><br>
+            <label for="email">Email Address *</label><br>
+            <input type="email" id="email" required><br><br>
+            <label for="password">Password *</label><br>
+            <input type="password" id="password" required><br><br>
+            <label for="no">Contact Number</label><br>
+            <input type="text" id="no"><br><br>
+            <label for="qualification">Why I support this campaign? *</label><br>
+            <textarea name="qualification" id="qualification" required></textarea><br><br>
+            <button type="submit">Sign In</button>
+        </fieldset>
+    </form>
+    <div class="footer">
+        <p><span><strong>PamSevillaCino Ent.</span> &nbsp All Rights Reserved 2024</strong>
     </div>
-    <link rel="stylesheet" href="style.css">
+    <script>
+        function record(){
+            var fn = document.getElementById("firstName").value;
+            var ln = document.getElementById("lastName").value;
+            var address = document.getElementById("email").value;
+            var qualification = document.getElementById("qualification").value;
+            var sex = document.getElementsByName("sex");
+            localStorage.setItem('firstname', fn);
+            localStorage.setItem('lastname', ln);
+            localStorage.setItem('address', address);
+            localStorage.setItem('qualification', qualification);
 
+            for (i=0;i<sex.length;i++){
+                if (sex[i].checked){
+                    localStorage.setItem('sex', sex[i].value);
+                }
+            }
+            check();
+            return false;
+        }
+        function setItem(){
+
+        }
+    </script>
 </body>
 </html>
