@@ -16,42 +16,160 @@
         <h1 class="header"><strong>WATERMELON SEEDS</strong></h1>
         <p class="par"><br><strong>Even the smallest seedlings can grow to something bigger.</strong></p>
     </div>
-    <form onsubmit="return record();" action="profilepage.html">
+    <form>
         <fieldset>
             <br>
             <div>Sign Up</div><hr>
-            <label for="firstName">First Name *</label><br>
-            <input type="text" id="firstName" required><br><br>
-            <label for="lastName">Last Name *</label><br>
-            <input type="text" id="lastName" required><br><br>
-            <div>Gender *</div>
-            <input type="radio" name="sex" id="male" value="male" required>
-            <label for="male">Male</label><br>
-            <input type="radio" name="sex" id="female" value="female" required>
-            <label for="female">Female</label><br>
-            <input type="radio" name="sex" id="pNTS" value="pNTS" required>
-            <label for="pNTS">Prefer Not to Say</label><br><br>
-            <label for="email">Email Address *</label><br>
-            <input type="email" id="email" required><br><br>
-            <label for="password">Password *</label><br>
-            <input type="password" id="password" required><br><br>
-            <label for="no">Contact Number</label><br>
-            <input type="text" id="no"><br><br>
-            <label for="qualification">Why I support this campaign? *</label><br>
-            <textarea name="qualification" id="qualification" required></textarea><br><br>
-            <button type="submit">Sign In</button>
+            <div>
+                <span>Name</span>
+                <span class="requirement_indicator">*</span>
+                <span class="required_text" id="required_name"></span><br>
+                <span>
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                </span>
+                <span>
+                    <input type="text" id="lastName" placeholder="Last Name" required>
+                </span>
+                <span></span>
+            </div>
+            <br>
+            <div>
+                <span>Gender</span>
+                <span class="requirement_indicator">*</span>
+                <span class="required_text" id="required_gender"></span><br>
+                <input type="radio" name="sex" id="male" value="Male" required>
+                <label for="male">Male</label><br>
+                <input type="radio" name="sex" id="female" value="Female" required>
+                <label for="female">Female</label><br>
+                <input type="radio" name="sex" id="pNTS" value="Prefer Not to Say" required>
+                <label for="pNTS">Prefer Not to Say</label>
+            </div>
+            <br>
+            <div>
+                <span>Email Address</span>
+                <span class="requirement_indicator">*</span>
+                <span class="required_text" id="required_email"></span><br>
+                <input type="email" id="email" required>
+            </div>
+            <br>
+            <div>
+                <span>Password</span>
+                <span class="requirement_indicator">*</span>
+                <span class="required_text" id="required_password"></span><br>
+                <input type="password" id="password" required>
+            </div>
+            <br>
+            <div>
+                <span>Contact Number</span>
+                <br>
+                <input type="text" id="no">
+            </div>
+            <br>
+            <div>
+                <span>Why I support this campaign?</span>
+                <span class="requirement_indicator">*</span>
+                <span class="required_text" id="required_qualification"></span><br>
+                <textarea name="qualification" id="qualification" required></textarea>
+            </div>
+            <br>
+            <div>
+                <button type="button" onclick="record()">Sign In</button>
+            </div>
         </fieldset>
     </form>
     <div class="footer">
         <p><span><strong>PamSevillaCino Ent.</span> &nbsp All Rights Reserved 2024</strong>
     </div>
     <script>
+        var filled;
+        function check(){
+            filled = true;
+            var fname = document.getElementById('firstName');
+            var lname = document.getElementById('lastName');
+            var gender = document.getElementsByName('sex');
+            var email = document.getElementById('email');
+            var password = document.getElementById('password');
+            var qualification = document.getElementById('qualification');
+
+            var required_name = document.getElementById('required_name');
+            var required_email = document.getElementById('required_email');
+            var required_gender = document.getElementById('required_gender');
+            var required_password = document.getElementById('required_password');
+            var required_qualification = document.getElementById('required_qualification');
+
+            required_name.textContent = '';
+            required_email.textContent = '';
+            required_gender.textContent = '';
+            required_password.textContent = '';
+            required_qualification.textContent = '';
+
+            if (fname.value.trim() === '') {
+                required_name.textContent = 'required';
+                required_gender.textContent = 'required';
+                required_email.textContent = 'required';
+                required_password.textContent = 'required';
+                required_qualification.textContent = 'required';
+                filled = false;
+            }
+            if (lname.value.trim() === ''){
+                required_name.textContent = 'required';
+                required_gender.textContent = 'required';
+                required_email.textContent = 'required';
+                required_password.textContent = 'required';
+                required_qualification.textContent = 'required';
+                filled = false;
+            }
+
+            var genderSelected = false;
+            for (var k = 0; k<gender.length; k++) {
+                if (gender[k].checked) {
+                    genderSelected = true;
+                    break;
+                }
+            }
+            if (!genderSelected) {
+                required_name.textContent = 'required';
+                required_gender.textContent = 'required';
+                required_email.textContent = 'required';
+                required_password.textContent = 'required';
+                required_qualification.textContent = 'required';
+                filled = false;
+            }
+
+            if (email.value.trim() === ''){
+                required_name.textContent = 'required';
+                required_gender.textContent = 'required';
+                required_email.textContent = 'required';
+                required_password.textContent = 'required';
+                required_qualification.textContent = 'required';
+                filled = false;
+            }
+            if (password.value.trim() === ''){
+                required_name.textContent = 'required';
+                required_gender.textContent = 'required';
+                required_email.textContent = 'required';
+                required_password.textContent = 'required';
+                required_qualification.textContent = 'required';
+                filled = false;
+            }
+            if (qualification.value.trim() === ''){
+                required_name.textContent = 'required';
+                required_gender.textContent = 'required';
+                required_email.textContent = 'required';
+                required_password.textContent = 'required';
+                required_qualification.textContent = 'required';
+                filled = false;
+            }
+        }
         function record(){
-            var fn = document.getElementById("firstName").value;
-            var ln = document.getElementById("lastName").value;
-            var address = document.getElementById("email").value;
-            var qualification = document.getElementById("qualification").value;
-            var sex = document.getElementsByName("sex");
+            check();
+            var fn, ln, address, qualification, sex, password, blank = '';
+            fn = document.getElementById("firstName").value;
+            ln = document.getElementById("lastName").value;
+            address = document.getElementById("email").value;
+            qualification = document.getElementById("qualification").value;
+            password = document.getElementById("password").value;
+            sex = document.getElementsByName("sex");
             localStorage.setItem('firstname', fn);
             localStorage.setItem('lastname', ln);
             localStorage.setItem('address', address);
@@ -62,11 +180,14 @@
                     localStorage.setItem('sex', sex[i].value);
                 }
             }
-            check();
-            return false;
-        }
-        function setItem(){
 
+            if(filled){
+                profilepage();
+            }
+
+        }
+        function profilepage(){
+            window.location.href = 'profilepage.html';
         }
     </script>
 </body>

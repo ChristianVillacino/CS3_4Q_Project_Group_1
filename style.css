@@ -87,3 +87,10 @@ fieldset{
     width: 400px;
     padding: 10px;
 }
+
+.requirement_indicator{
+    color: red;
+}
+span#required_name, #required_gender, #required_email, #required_password, #required_qualification{
+    color: red;
+}
