@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     padding:0px;
     margin:0px;
@@ -7,7 +11,10 @@
     padding: 10px;
     background-color: #AF1B1B;
     border: 2px solid black;
+    
+    
 }
+
 .navbar img{
     margin-left: 5px;
     border: 2px solid rgb(201, 24, 74);
@@ -15,7 +22,10 @@
 }
 .navbar .page-links{
     display:inline;
-    font-family: pixelify sans;
+    font-size: large;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background-color:rgb(231, 52, 103);
     border-radius:5px;
     padding: 1vh;
@@ -23,7 +33,7 @@
     margin-right: 2vh;
     float: right;
     text-decoration: none;
-    color: rgb(109, 35, 48);
+    color: rgb(0, 0, 0);
 }
 .banner{
     background-image: url(images/banner3.png);
@@ -40,6 +50,9 @@
     margin-bottom: 1vh;
     text-shadow: 2px 2px #ffffff;
     text-align: center;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 .banner .par{
     color:rgb(145, 28, 77);
@@ -47,6 +60,9 @@
     margin-top: -3vh;
     text-shadow: 2px 2px rgb(255, 255, 255);
     text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+
 }
 
 .footer{
@@ -68,14 +84,30 @@
 }
 
 form {
-    left: 25vw;
+    margin-left: 70vh;
     display: flex;
     background-color: #f4f4f4b6;
     padding: 2vw;
     width: 400px;
-    height: 500px;
-    
+    height: 650px;
+    font-family: "Saira", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
 
+}
+
+.signUp{
+    font-family: "Saira", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-size: larger;
+    padding: 2px;
+    background-color:rgb(231, 52, 103);
+    border-radius: 10px;
 }
 
 fieldset{
@@ -95,4 +127,21 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     border: none;
+}
+
+.profile{
+    font-size: medium;
+    text-align: center;
+    font-family: "Saira", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: larger;
+    display: block;
+    background-color: rgba(226, 226, 226, 0.808);
+    margin-top: 10vh;
+    margin-right: 50vh;
+    margin-left: 50vh;
+    padding: 10px;
+    border-radius: 15px;
 }
