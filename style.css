@@ -145,3 +145,17 @@ body {
     padding: 10px;
     border-radius: 15px;
 }
+
+.text{
+    text-align: center;
+    font-size: large;
+
+}
+
+
+.boycotts{
+    align-items: center;
+    margin-left: 40vw;
+    margin-top: 5vh;
+
+}
